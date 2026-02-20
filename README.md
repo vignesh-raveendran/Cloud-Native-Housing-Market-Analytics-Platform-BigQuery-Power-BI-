@@ -21,6 +21,26 @@ This project analyzes Denmark Housing Market data using **Google BigQuery** and 
 
 The objective was to build a fully interactive, business-ready dashboard that enables stakeholders to monitor housing performance across regions, house types, and time.
 
+### 🖼 Dashboard Preview
+* **📊 House Market Overview**
+
+
+<img width="1256" height="743" alt="Screenshot 2026-02-16 204358" src="https://github.com/user-attachments/assets/59b92807-671b-415e-8547-0359a40b266c" />
+
+
+  
+* **📈 Sales Performance**
+  
+
+<img width="1300" height="722" alt="Screenshot 2026-02-16 210502" src="https://github.com/user-attachments/assets/3356734f-ca47-477e-8262-7ed65c9e259a" />
+
+
+* **🏘 House Type Analysis**
+
+<img width="1299" height="720" alt="Screenshot 2026-02-17 110801" src="https://github.com/user-attachments/assets/5db2a36f-5a3e-44f5-abe2-7ef23aaf00c8" />
+
+
+
 ---
 
 # 🔄 End-to-End Project Flow
@@ -240,16 +260,6 @@ TOTALYTD(
 * Include mortgage approval analysis
 * Build ML model for price prediction
 
-### 🖼 Dashboard Preview
-* **📊 House Market Overview**
-  
-* **📈 Sales Performance**
-  
-
-[Image of Sales Performance Power BI Dashboard]
-
-* **🏘 House Type Analysis**
-  
 
 ### 🛠 Tech Stack
 * Google BigQuery
