@@ -219,3 +219,49 @@ TOTALYTD(
     Housing[date]
 )
 ```
+### 📈 Key Insights
+* Zealand generates the highest housing revenue
+* Auction channel is the most volatile
+* Family sales show declining trend
+* Offer and purchase prices closely aligned
+* Smaller regions show higher price volatility
+* Interest rates influence villa and farm pricing more strongly
+
+### 🧠 Learnings & Challenges
+* **Advanced DAX:** `MEDIANX`, `TOTALYTD`, `DATESINPERIOD`, `ALLEXCEPT`, `DIVIDE`
+* **Time Intelligence:** Managing filter context using `MAX(date)` was critical.
+* **BigQuery Integration:** Connected cloud database directly into Power BI.
+* **Outlier Management:** Median calculations provided better insights than averages.
+* **Dashboard UX:** Clean slicers, logical visual flow, and business storytelling.
+
+### 🏁 Recommendations
+* Add predictive forecasting
+* Integrate real-time housing feeds
+* Include mortgage approval analysis
+* Build ML model for price prediction
+
+### 🖼 Dashboard Preview
+* **📊 House Market Overview**
+  
+* **📈 Sales Performance**
+  
+
+[Image of Sales Performance Power BI Dashboard]
+
+* **🏘 House Type Analysis**
+  
+
+### 🛠 Tech Stack
+* Google BigQuery
+* Power BI Desktop
+* DAX
+* Power Query
+* Data Modeling
+* Time Intelligence
+
+### ✍️ Author
+
+**Vignesh Raveendran**
+ -- *Data Engineer / Data Analyst*
+* **LinkedIn:** [https://linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
+* **Portfolio:** [https://yourportfolio.com](https://yourportfolio.com)
