@@ -21,19 +21,22 @@ This project analyzes Denmark Housing Market data using **Google BigQuery** and 
 
 The objective was to build a fully interactive, business-ready dashboard that enables stakeholders to monitor housing performance across regions, house types, and time.
 
+---
+
 ### 🖼 Dashboard Preview
 * **📊 House Market Overview**
 
 
 <img width="1256" height="743" alt="Screenshot 2026-02-16 204358" src="https://github.com/user-attachments/assets/59b92807-671b-415e-8547-0359a40b266c" />
 
-
+---
   
 * **📈 Sales Performance**
   
 
 <img width="1300" height="722" alt="Screenshot 2026-02-16 210502" src="https://github.com/user-attachments/assets/3356734f-ca47-477e-8262-7ed65c9e259a" />
 
+---
 
 * **🏘 House Type Analysis**
 
@@ -144,10 +147,14 @@ IF(
 )
 ```
 
+<img width="1313" height="275" alt="Screenshot 2026-02-16 193802" src="https://github.com/user-attachments/assets/833e7e28-5cd9-4af9-867e-d29d7a7a10d4" />
+
+
 **Result:**
 - Auction sales showed positive growth (~29%)
 - Family sales declined (~ -75%)
 
+---
 
 ### 2️⃣ Median Sales Price Change by Region
 * **Situation:** Average sales prices were heavily skewed by extreme outliers (e.g., luxury estates vs. very small apartments).
@@ -170,8 +177,13 @@ RETURN
     IF(PreMedianPrice <> 0, (CurrMedianPrice - PreMedianPrice) / PreMedianPrice, BLANK())
 ```
 
+<img width="447" height="351" alt="Screenshot 2026-02-16 203232" src="https://github.com/user-attachments/assets/e4fda4ba-bfa3-4218-a43d-b36f749e2c2a" />
+
+
 **Result:**
 - Identified regional stability differences across Denmark.
+
+---
 
 ### 3️⃣ Offer Price vs Purchase Price
 * **Situation:** Understand negotiation dynamics.
@@ -182,7 +194,12 @@ Offer Price =
 (100 - Housing[%_change_between_offer_and_purchase])
 ```
 
+![Recording 2026-02-16 194346](https://github.com/user-attachments/assets/d2d2f36c-e167-4a7d-9376-99d4903e2520)
+
+
 * **Result:** Strong linear relationship observed between offer and purchase prices.
+
+---
 
 ### 4️⃣ Units Sold in Latest Year & Quarter
 ```
@@ -194,7 +211,13 @@ CALCULATE(
 )
 ```
 
+<img width="395" height="122" alt="Screenshot 2026-02-20 114729" src="https://github.com/user-attachments/assets/1a121750-8875-4e93-b3b8-ee8c8e90a7ba" />
+
+
 * **Result:** 77 units sold in latest quarter.
+
+
+---
 
 
 ### 5️⃣ Last 12 Month Sales
@@ -210,7 +233,14 @@ CALCULATE(
     )
 )
 ```
+
+
+
 * **Result:** Captured rolling sales momentum.
+
+---
+
+
 
 ### 6️⃣ Sales by Region
 ```
@@ -220,7 +250,14 @@ CALCULATE(
     ALLEXCEPT(Housing, Housing[region])
 )
 ```
+
+<img width="416" height="570" alt="Screenshot 2026-02-16 204816" src="https://github.com/user-attachments/assets/b647fc0e-7205-41fd-ac77-084f83112ba8" />
+
+
 * **Result:** Zealand and Jutland dominate housing sales.
+
+---
+
 
 ### 7️⃣ Offer to SQM Ratio
 ```
@@ -231,6 +268,13 @@ DIVIDE(
 )
 ```
 
+<img width="380" height="317" alt="Screenshot 2026-02-16 210020" src="https://github.com/user-attachments/assets/7c0c4392-e6e6-43fd-9e39-e6e21f99006f" />
+
+
+
+---
+
+
 ### 8️⃣ TotalYTD Sales
 ```
 TotalYTD Sales =
@@ -239,6 +283,10 @@ TOTALYTD(
     Housing[date]
 )
 ```
+<img width="420" height="251" alt="Screenshot 2026-02-16 205109" src="https://github.com/user-attachments/assets/89783268-b16d-4afd-a193-462ec348a607" />
+
+---
+
 ### 📈 Key Insights
 * Zealand generates the highest housing revenue
 * Auction channel is the most volatile
@@ -247,12 +295,18 @@ TOTALYTD(
 * Smaller regions show higher price volatility
 * Interest rates influence villa and farm pricing more strongly
 
+
+---
+
 ### 🧠 Learnings & Challenges
 * **Advanced DAX:** `MEDIANX`, `TOTALYTD`, `DATESINPERIOD`, `ALLEXCEPT`, `DIVIDE`
 * **Time Intelligence:** Managing filter context using `MAX(date)` was critical.
 * **BigQuery Integration:** Connected cloud database directly into Power BI.
 * **Outlier Management:** Median calculations provided better insights than averages.
 * **Dashboard UX:** Clean slicers, logical visual flow, and business storytelling.
+
+---
+
 
 ### 🏁 Recommendations
 * Add predictive forecasting
@@ -261,6 +315,8 @@ TOTALYTD(
 * Build ML model for price prediction
 
 
+---
+
 ### 🛠 Tech Stack
 * Google BigQuery
 * Power BI Desktop
@@ -268,6 +324,10 @@ TOTALYTD(
 * Power Query
 * Data Modeling
 * Time Intelligence
+
+
+---
+
 
 ### ✍️ Author
 
